@@ -18,7 +18,7 @@
     <ManifestCertificateThumbprint>51ED5969E56E61763E23ED5ABB85072D524CE246</ManifestCertificateThumbprint>
     <ManifestKeyFile>Shazzam_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
     <ExpressionBlendVersion>3.0.1927.0</ExpressionBlendVersion>
     <ApplicationIcon>Images\logo.ico</ApplicationIcon>
     <FileUpgradeFlags>
@@ -654,7 +654,6 @@
     <Content Include="Tutorials\07a_ChangePosition.fx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Shazzam_TemporaryKey.pfx" />
     <Content Include="Tutorials\06_SwapColors.fx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -884,12 +883,12 @@
   <ItemGroup>
     <PublishFile Include="ICSharpCode.TextEditor">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>

@@ -16,7 +16,7 @@ namespace Shazzam
   /// </summary>
   public partial class App : Application
   {
-    [PreEmptive.Attributes.Setup(CustomEndpoint = "so-s.info/PreEmptive.Web.Services.Messaging/MessagingServiceV2.asmx")]
+    //[PreEmptive.Attributes.Setup(CustomEndpoint = "so-s.info/PreEmptive.Web.Services.Messaging/MessagingServiceV2.asmx")]
     protected override void OnStartup(StartupEventArgs e)
     {
       base.OnStartup(e);
@@ -97,7 +97,7 @@ namespace Shazzam
       }
     }
 
-    [PreEmptive.Attributes.Teardown()]
+    //[PreEmptive.Attributes.Teardown()]
     protected override void OnExit(ExitEventArgs e)
     {
       base.OnExit(e);
