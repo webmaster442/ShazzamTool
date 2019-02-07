@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Shazzam.ViewModels
+﻿namespace Shazzam.ViewModels
 {
-  class CodeTabViewModel : ViewModelBase
-  {
-
-    public bool AreGeneratedCodeTabsEnabled
+    internal class CodeTabViewModel : ViewModelBase
     {
-      get
-      {
-        return Shazzam.Properties.Settings.Default.AreGeneratedCodeTabsEnabled;
-      }
-    }
 
-  }
+        public bool AreGeneratedCodeTabsEnabled
+        {
+            get
+            {
+                return Shazzam.Properties.Settings.Default.AreGeneratedCodeTabsEnabled;
+            }
+        }
+
+    }
 }

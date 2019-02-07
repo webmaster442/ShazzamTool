@@ -1,12 +1,14 @@
-﻿using System.Windows;
-using Shazzam.Views;
+﻿using Shazzam.Views;
+using System.Windows;
 
-namespace Shazzam {
-	class ShazzamSwitchboard {
-		public static Window MainWindow { get; set; }
+namespace Shazzam
+{
+    internal static class ShazzamSwitchboard
+    {
+        public static Window MainWindow { get; set; }
 
-		public static CodeTabView CodeTabView { get; set; }
+        public static CodeTabView CodeTabView { get; set; }
 
-		public static FileLoaderPlugin FileLoaderPlugin { get; set; }
-	}
+        public static FileLoaderPlugin FileLoaderPlugin { get; set; }
+    }
 }

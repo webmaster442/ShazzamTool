@@ -7,14 +7,14 @@
              d:DesignHeight='120'
              d:DesignWidth='603'
              VerticalAlignment="Top">
-  <UserControl.Resources>
-   
-    <DataTemplate x:Key="TextureMapDataTemplate2">
-      <StackPanel Orientation='Horizontal'
+    <UserControl.Resources>
+
+        <DataTemplate x:Key="TextureMapDataTemplate2">
+            <StackPanel Orientation='Horizontal'
                   Background="Black"
                   HorizontalAlignment="Center"
                   VerticalAlignment="Center">
-        <Border  BorderBrush="{StaticResource VeryLightBrush}"
+                <Border  BorderBrush="{StaticResource VeryLightBrush}"
                  BorderThickness="4"
                  Margin="2"
                  VerticalAlignment='Center'
@@ -22,7 +22,7 @@
                  d:LayoutOverrides="Width"
                  Padding="2"
                  HorizontalAlignment="Center">
-          <Image Height='60'
+                    <Image Height='60'
                  HorizontalAlignment='Center'
                  Name='image1'
                  Stretch='UniformToFill'
@@ -31,45 +31,45 @@
                  Source='{Binding LongFileName}'
                  ToolTipService.Placement='Center'
                  ToolTipService.VerticalOffset='-210'>
-          	
-   
 
-            <Image.ToolTip>
-              <Grid Width="400"
+
+
+                        <Image.ToolTip>
+                            <Grid Width="400"
                     Height="300"
                     Background="Black">
 
-                <Image Height='298'
+                                <Image Height='298'
                        HorizontalAlignment='Center'
                        Name='image2'
                        Stretch='UniformToFill'
                        VerticalAlignment='Center'
                        Width='398'
                        Source='{Binding LongFileName}' />
-                <TextBlock Foreground='{StaticResource VeryLightBrush}'
+                                <TextBlock Foreground='{StaticResource VeryLightBrush}'
                            Margin='4'
                            FontSize='24'
                            Background='#00FFFFFF'
                            Text='{Binding ShortFileName}' />
-              </Grid>
-            </Image.ToolTip>
+                            </Grid>
+                        </Image.ToolTip>
 
-          </Image>
-        </Border>
-      </StackPanel>
-    </DataTemplate>
-    <ItemsPanelTemplate x:Key="ItemsPanelTemplate1">
-      <VirtualizingStackPanel Orientation="Horizontal" />
-    </ItemsPanelTemplate>
-  </UserControl.Resources>
-  <Grid Name='mainGrid'>
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="Auto" />
-      <ColumnDefinition Width="Auto"
+                    </Image>
+                </Border>
+            </StackPanel>
+        </DataTemplate>
+        <ItemsPanelTemplate x:Key="ItemsPanelTemplate1">
+            <VirtualizingStackPanel Orientation="Horizontal" />
+        </ItemsPanelTemplate>
+    </UserControl.Resources>
+    <Grid Name='mainGrid'>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto"
                         MinWidth="104.832" />
-      <ColumnDefinition />
-    </Grid.ColumnDefinitions>
-    <Border  BorderBrush="{StaticResource VeryLightBrush}"
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Border  BorderBrush="{StaticResource VeryLightBrush}"
              BorderThickness="4"
              Margin="2,2,2,0"
              VerticalAlignment='Top'
@@ -77,41 +77,41 @@
              HorizontalAlignment='Center'
              d:LayoutOverrides="Width">
 
-      <Image Height='60'
+            <Image Height='60'
              HorizontalAlignment='Left'
              Name='image1'
              Stretch='UniformToFill'
              VerticalAlignment='Top'
              Width='80'
              Source="/Shazzam;component/Images/cactus.jpg">
-        <Image.ToolTip>
-          <Grid Width="400"
+                <Image.ToolTip>
+                    <Grid Width="400"
                 Height="300"
                 Background="Black">
-            <Image Height='298'
+                        <Image Height='298'
                    HorizontalAlignment='Center'
                    Name='image2'
                    Stretch='UniformToFill'
                    VerticalAlignment='Center'
                    Width='398'
                    Source="/Shazzam;component/Images/cactus.jpg" />
-          </Grid>
-        </Image.ToolTip>
-      </Image>
-    </Border>
-    <StackPanel>
+                    </Grid>
+                </Image.ToolTip>
+            </Image>
+        </Border>
+        <StackPanel>
 
-      <TextBlock TextWrapping="Wrap"
+            <TextBlock TextWrapping="Wrap"
                  Text='Choose Image File'
                  HorizontalAlignment="Center"
                  Foreground="{DynamicResource NeutralWhiteBrush}"
                  Margin="0,3,0,0">
-            	<TextBlock.Background>
-            		<ImageBrush />
-            	</TextBlock.Background>
-      </TextBlock>
+                <TextBlock.Background>
+                    <ImageBrush />
+                </TextBlock.Background>
+            </TextBlock>
 
-      <Button Content='Open File...'
+            <Button Content='Open File...'
               Height='23'
               HorizontalAlignment='Center'
               Margin="12"
@@ -120,36 +120,36 @@
               Width='75'
               Click='btnOpenImage_Click'
               Grid.Column="0" />
-      <Popup x:Name="popSelectTexture"
+            <Popup x:Name="popSelectTexture"
              StaysOpen='False'
              PlacementTarget='{Binding ElementName=this}'
              Placement='Left'
              HorizontalOffset='-160'>
-        <Grid Background="Gray"
+                <Grid Background="Gray"
               Height="106"
               Width="600">
-          <ListBox Margin="2,2,2,2"
+                    <ListBox Margin="2,2,2,2"
                    x:Name='IncludedTexturesList'
                    ItemTemplate="{DynamicResource TextureMapDataTemplate2}"
                    ItemsPanel="{DynamicResource ItemsPanelTemplate1}"
                    SelectionChanged="IncludedTextures_SelectionChanged" />
-        </Grid>
-      </Popup>
-    </StackPanel>
-    <StackPanel Grid.Column="2"
+                </Grid>
+            </Popup>
+        </StackPanel>
+        <StackPanel Grid.Column="2"
                 HorizontalAlignment="Left"
                 Orientation="Vertical"
                 d:LayoutOverrides="Height">
-      <TextBlock TextWrapping="Wrap"
+            <TextBlock TextWrapping="Wrap"
                  Text='Shazzam Texture Map'
                  HorizontalAlignment="Center"
                  Foreground="{DynamicResource NeutralWhiteBrush}"
                  Margin="0,3,0,0">
-        		<TextBlock.Background>
-        			<ImageBrush />
-        		</TextBlock.Background>
-      </TextBlock>
-      <Button Content='Choose Texture'
+                <TextBlock.Background>
+                    <ImageBrush />
+                </TextBlock.Background>
+            </TextBlock>
+            <Button Content='Choose Texture'
               Height='23'
               HorizontalAlignment='Center'
               Margin="12"
@@ -157,16 +157,16 @@
               VerticalAlignment='Top'
               Click='chooseTexture_click' />
 
-    </StackPanel>
+        </StackPanel>
 
-    <Grid.Background>
-      <LinearGradientBrush EndPoint="1,0.5"
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0.5"
                            StartPoint="0,0.5">
-        <GradientStop Color="{StaticResource VeryDark}"
+                <GradientStop Color="{StaticResource VeryDark}"
                       Offset=".5" />
-        <GradientStop Color="{StaticResource NeutralDark}"
+                <GradientStop Color="{StaticResource NeutralDark}"
                       Offset="1" />
-      </LinearGradientBrush>
-    </Grid.Background>
-  </Grid>
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
 </UserControl>

@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.Win32;
+using System;
 using System.Windows;
-using Microsoft.Win32;
 
 
 namespace Cinch
@@ -17,7 +16,7 @@ namespace Cinch
         /// Embedded OpenFileDialog to pass back correctly selected
         /// values to ViewModel
         /// </summary>
-        private OpenFileDialog ofd = new OpenFileDialog(); 
+        private OpenFileDialog ofd = new OpenFileDialog();
 
         #endregion
 
@@ -49,8 +48,8 @@ namespace Cinch
         public string FileName
         {
             get { return ofd.FileName; }
-            set 
-            {  
+            set
+            {
                 //Do nothing
             }
         }

@@ -246,8 +246,6 @@
     <Compile Include="CodeGen\CodeParser.cs" />
     <Compile Include="CodeGen\CompilerException.cs" />
     <Compile Include="CodeGen\CreatePixelShaderClass.cs" />
-    <Compile Include="CodeGen\ShaderCompiler.cs" />
-    <Compile Include="CodeGen\ShaderCompiler2.cs" />
     <Compile Include="CodeGen\ShaderCompilerDirect.cs" />
     <Compile Include="Commands\AppCommands.cs">
       <SubType>Code</SubType>
