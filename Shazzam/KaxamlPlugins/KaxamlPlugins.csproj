@@ -11,7 +11,7 @@
     <OutputType>library</OutputType>
     <!-- Most people will use Publish dialog in Visual Studio to increment this -->
     <MinFrameworkVersionRequired>3.0</MinFrameworkVersionRequired>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
