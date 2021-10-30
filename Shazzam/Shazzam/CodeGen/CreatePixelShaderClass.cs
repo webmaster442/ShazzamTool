@@ -1,15 +1,18 @@
-﻿using Microsoft.CSharp;
+﻿using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.Emit;
 using Shazzam.Converters;
 using Shazzam.Properties;
 using System;
 using System.CodeDom;
 using System.CodeDom.Compiler;
-using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Media;
+using System.Windows.Media.Effects;
 using System.Windows.Media.Media3D;
 
 namespace Shazzam.CodeGen
@@ -24,23 +27,58 @@ namespace Shazzam.CodeGen
 
         public static Assembly CompileInMemory(string code)
         {
-            var provider = new CSharpCodeProvider(new Dictionary<string, string>() { { "CompilerVersion", "v3.5" } });
+            SyntaxTree syntaxTree = CSharpSyntaxTree.ParseText(code);
 
-            CompilerParameters options = new CompilerParameters();
-            options.ReferencedAssemblies.Add("System.dll");
-            options.ReferencedAssemblies.Add("System.Core.dll");
-            options.ReferencedAssemblies.Add("WindowsBase.dll");
-            options.ReferencedAssemblies.Add("PresentationFramework.dll");
-            options.ReferencedAssemblies.Add("PresentationCore.dll");
-            options.IncludeDebugInformation = false;
-            options.GenerateExecutable = false;
-            options.GenerateInMemory = true;
-            CompilerResults results = provider.CompileAssemblyFromSource(options, code);
-            provider.Dispose();
-            if (results.Errors.Count == 0)
-                return results.CompiledAssembly;
-            else
+            string assemblyName = Path.GetRandomFileName();
+
+            if (!(AppContext.GetData("TRUSTED_PLATFORM_ASSEMBLIES") is string trusted))
                 return null;
+
+            var trustedAssembliesPaths = trusted.Split(Path.PathSeparator);
+
+            var neededAssemblies = new[]
+            {
+                "System.Runtime",
+                "netstandard"
+            };
+
+            var references = trustedAssembliesPaths
+                .Where(p => neededAssemblies.Contains(Path.GetFileNameWithoutExtension(p)))
+                .Select(p => MetadataReference.CreateFromFile(p)).ToList();
+
+            references.Add(GetReference<object>());
+            references.Add(GetReference<PixelShader>());
+            references.Add(GetReference<Point>());
+
+
+
+            CSharpCompilation compilation = CSharpCompilation.Create(
+                assemblyName,
+                syntaxTrees: new[] { syntaxTree },
+                references: references,
+                options: new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
+
+            using (var ms = new MemoryStream())
+            {
+                EmitResult result = compilation.Emit(ms);
+
+                if (result.Success)
+                {
+                    ms.Seek(0, SeekOrigin.Begin);
+                    Assembly assembly = Assembly.Load(ms.ToArray());
+                    return assembly;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
+        private static PortableExecutableReference GetReference<T>()
+        {
+            string location = typeof(T).GetTypeInfo().Assembly.Location;
+            return MetadataReference.CreateFromFile(location);
         }
 
         private static CodeCompileUnit BuildPixelShaderGraph(ShaderModel shaderModel, bool includePixelShaderConstructor)
