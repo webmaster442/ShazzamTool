@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:converters="clr-namespace:Shazzam.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:extended="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit/extended"
+    xmlns:extended="http://schemas.xceed.com/wpf/xaml/toolkit"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <UserControl.Resources>
@@ -38,7 +38,7 @@
                 VerticalAlignment="Center"
                 Foreground="{StaticResource NeutralWhiteBrush}"
                 Text="Animate To Value:" />
-
+            
             <extended:ColorPicker
                 Name="endColorPicker"
                 Width="70"

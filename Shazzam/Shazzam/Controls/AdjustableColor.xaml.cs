@@ -1,10 +1,11 @@
-﻿using Microsoft.Windows.Controls;
+﻿
 using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using Xceed.Wpf.Toolkit;
 
 namespace Shazzam.Controls
 {
@@ -23,7 +24,9 @@ namespace Shazzam.Controls
             DecelerationRatio = 0.25,
 
         };
-        private Color _startColor;
+
+        private Color? _startColor;
+
         public AdjustableColor()
         {
             InitializeComponent();
@@ -115,7 +118,7 @@ namespace Shazzam.Controls
         /// Gets or sets the Value property.  This dependency property
         /// indicates the current Value of the AdjustableColor.
         /// </summary>
-        public Color Value
+        public Color? Value
         {
             get { return (Color)GetValue(ValueProperty); }
             set { SetValue(ValueProperty, value); }
@@ -143,7 +146,7 @@ namespace Shazzam.Controls
 
 
 
-        private void colorPicker1_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color> e)
+        private void colorPicker1_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
         {
             this.Value = e.NewValue;
         }

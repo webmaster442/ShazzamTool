@@ -12,14 +12,6 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("KaxamlPlugins")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("KaxamlPlugins")]
-[assembly: AssemblyCopyright("Copyright @  2007")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 
 //In order to begin building localizable applications, set 
@@ -58,5 +50,4 @@ using System.Runtime.InteropServices;
 //      Revision
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-[assembly: AssemblyVersion("1.0.*")]
+// by using the '*' as shown below:[assembly: ComVisible(false)]

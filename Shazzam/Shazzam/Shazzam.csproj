@@ -1,472 +1,83 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EB76EF00-42DE-4715-9675-CFBB2C073F8F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Shazzam</RootNamespace>
-    <AssemblyName>Shazzam</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <WarningLevel>4</WarningLevel>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <ManifestCertificateThumbprint>51ED5969E56E61763E23ED5ABB85072D524CE246</ManifestCertificateThumbprint>
-    <ManifestKeyFile>Shazzam_TemporaryKey.pfx</ManifestKeyFile>
-    <GenerateManifests>true</GenerateManifests>
-    <SignManifests>false</SignManifests>
-    <ExpressionBlendVersion>3.0.1927.0</ExpressionBlendVersion>
-    <ApplicationIcon>Images\logo.ico</ApplicationIcon>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <UpgradeBackupLocation />
-    <TargetFrameworkProfile />
-    <PublishUrl>C:\Data\Projects\Publish\Shazzam\Release\41\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>true</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <SupportUrl>http://shazzam-tool.com/support.htm</SupportUrl>
-    <ProductName>Shazzam</ProductName>
-    <PublisherName>Shazzam - Shader Effect Editor</PublisherName>
-    <SuiteName>By Walt Ritscher</SuiteName>
-    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
-    <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>42</ApplicationRevision>
-    <ApplicationVersion>1.4.0.42</ApplicationVersion>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <PublishWizardCompleted>true</PublishWizardCompleted>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>disable</Nullable>
+    <UseWPF>true</UseWPF>
+    <BaseOutputPath>..\bin\</BaseOutputPath>
+    <UseWindowsForms>True</UseWindowsForms>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
-    <PlatformTarget>x86</PlatformTarget>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>..\bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <PlatformTarget>x86</PlatformTarget>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="ICSharpCode.TextEditor, Version=3.2.1.6466, Culture=neutral, PublicKeyToken=4d61825e8dd49f1a, processorArchitecture=MSIL">
-      <HintPath>..\packages\ICSharpCode.TextEditor.3.2.1.6466\lib\Net20\ICSharpCode.TextEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="PresentationFramework.Aero">
-      <RequiredTargetFramework>3.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.configuration" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="UIAutomationProvider">
-      <RequiredTargetFramework>3.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="UIAutomationTypes" />
-    <Reference Include="WindowsBase">
-      <RequiredTargetFramework>3.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="PresentationCore">
-      <RequiredTargetFramework>3.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="PresentationFramework">
-      <RequiredTargetFramework>3.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="WindowsFormsIntegration">
-      <RequiredTargetFramework>3.0</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="WPFToolkit.Extended">
-      <HintPath>..\packages\Extended.Wpf.Toolkit.1.5.0\lib\net40\WPFToolkit.Extended.dll</HintPath>
-    </Reference>
+    <None Remove="d3dx10_40.dll" />
+    <None Remove="D3DX9_40.dll" />
+    <None Remove="D3DX9_40_64bit.dll" />
+    <None Remove="Images\cactus.jpg" />
+    <None Remove="Images\ColorRange.png" />
+    <None Remove="Images\connect.png" />
+    <None Remove="Images\Default\ColorRange.png" />
+    <None Remove="Images\disconnect.png" />
+    <None Remove="Images\disk.png" />
+    <None Remove="Images\Fire1.jpg" />
+    <None Remove="Images\gears.jpg" />
+    <None Remove="Images\help.ico" />
+    <None Remove="Images\Light1.jpg" />
+    <None Remove="Images\lines.jpg" />
+    <None Remove="Images\logo.ico" />
+    <None Remove="Images\page_copy.png" />
+    <None Remove="Images\SpikeBalls.jpg" />
+    <None Remove="Images\square.png" />
+    <None Remove="Images\Star.png" />
+    <None Remove="Images\SwirlLogo2.png" />
+    <None Remove="Resources\HLSLSyntax.xshd" />
   </ItemGroup>
+
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Compile Include="Commands\RelayCommand.cs" />
-    <Page Include="Controls\AdjustableColor.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\AdjustableSlider.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Controls\AdjustableSliderPair.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Controls\AdjustableSliderTriplet.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Controls\AdjustableSliderQuadruplet.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Controls\Icons.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Controls\TexturePicker.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="MainWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Plugins\About.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Plugins\ColorPickerPlugin.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Plugins\SettingsPlugin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Resources\BrushesRD.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Resources\EditorRD.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Resources\MenuRD.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Resources\PluginTheme.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\CodeTabsView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\DynamicInputView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Plugins\FileLoaderViewer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\ImageTabView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\PluginView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="CodeGen\CodeParser.cs" />
-    <Compile Include="CodeGen\CompilerException.cs" />
-    <Compile Include="CodeGen\CreatePixelShaderClass.cs" />
-    <Compile Include="CodeGen\ShaderCompilerDirect.cs" />
-    <Compile Include="Commands\AppCommands.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Constants.cs" />
-    <Compile Include="Controls\AdjustableColor.xaml.cs">
-      <DependentUpon>AdjustableColor.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\AdjustableSlider.xaml.cs">
-      <DependentUpon>AdjustableSlider.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\AdjustableSliderPair.xaml.cs">
-      <DependentUpon>AdjustableSliderPair.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\AdjustableSliderTriplet.xaml.cs">
-      <DependentUpon>AdjustableSliderTriplet.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\AdjustableSliderQuadruplet.xaml.cs">
-      <DependentUpon>AdjustableSliderQuadruplet.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Icons.xaml.cs">
-      <DependentUpon>Icons.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\TexturePicker.xaml.cs">
-      <DependentUpon>TexturePicker.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Converters\EqualityConverter.cs" />
-    <Compile Include="Converters\StretchToIsCheckedConverter.cs" />
-    <Compile Include="Converters\RegisterValueConverter.cs" />
-    <Compile Include="Converters\InvertBooleanConverter.cs" />
-    <Compile Include="Converters\DoubleToStringConverter.cs" />
-    <Compile Include="Converters\VisiblityToVisibilityConverter.cs" />
-    <Compile Include="Converters\StringToVisibilityConverter.cs" />
-    <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Helpers\VersionHelper.cs" />
-    <Compile Include="IndexingStackPanel.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Plugin.cs" />
-    <Compile Include="Plugins\About.xaml.cs">
-      <DependentUpon>About.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Plugins\ColorPickerPlugin.xaml.cs">
-      <DependentUpon>ColorPickerPlugin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Plugins\SettingsPlugin.xaml.cs">
-      <DependentUpon>SettingsPlugin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="Reveal.cs" />
-    <Compile Include="RoutedEventHelper.cs" />
     <Content Include="d3dx10_40.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="D3DCompiler_40.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <Content Include="D3DX9_40.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Views\greentarget.png" />
-    <Resource Include="Images\connect.png" />
-    <Resource Include="Images\disconnect.png" />
-    <Resource Include="Images\page_copy.png" />
-    <Resource Include="Images\disk.png" />
     <Content Include="D3DX9_40_64bit.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\Default\ColorRange.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Resource Include="Services\ReadAboutCinch.txt" />
-    <None Include="packages.config" />
-    <Resource Include="Images\cactus.jpg" />
-    <Compile Include="Services\IMessageBoxService.cs" />
-    <Compile Include="Services\IOpenFileService.cs" />
-    <Compile Include="Services\ISaveFileService.cs" />
-    <Compile Include="Services\WPFMessageBoxService.cs" />
-    <Compile Include="Services\WPFOpenFileService.cs" />
-    <Compile Include="Services\WPFSaveFileService.cs" />
-    <Compile Include="Settings.cs" />
-    <Compile Include="ShaderModel.cs" />
-    <Compile Include="ShaderModelConstantRegister.cs" />
-    <Compile Include="ShazzamSwitchboard.cs" />
-    <Compile Include="TargetFramework.cs" />
-    <Compile Include="ViewModels\CodeTabViewModel.cs" />
-    <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="ViewModels\VMBase.cs" />
-    <Compile Include="Views\CodeTabsView.xaml.cs">
-      <DependentUpon>CodeTabsView.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Views\DynamicInputView.xaml.cs">
-      <DependentUpon>DynamicInputView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Plugins\FileLoaderViewer.xaml.cs">
-      <DependentUpon>FileLoaderViewer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ImageTabView.xaml.cs">
-      <DependentUpon>ImageTabView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\PluginView.xaml.cs">
-      <DependentUpon>PluginView.xaml</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <None Include="app.config" />
-    <Resource Include="Fonts\Candara.ttf" />
-    <Resource Include="Fonts\Miramo.ttf" />
-    <Resource Include="Fonts\Peric.ttf" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Resource Include="Images\logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Include="Resources\HLSLSyntax.xshd" />
-    <AppDesigner Include="Properties\" />
   </ItemGroup>
+
   <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.1.0" />
+    <PackageReference Include="ICSharpCode.TextEditor" Version="3.2.1.6466" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KaxamlPlugins\KaxamlPlugins.csproj" />
+    <ProjectReference Include="..\Shazzam.Files\Shazzam.Files.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\cactus.jpg" />
     <Resource Include="Images\ColorRange.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="Images\connect.png" />
+    <Resource Include="Images\Default\ColorRange.png" />
+    <Resource Include="Images\disconnect.png" />
+    <Resource Include="Images\disk.png" />
     <Resource Include="Images\Fire1.jpg" />
-    <Resource Include="Images\Light1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\lines.jpg" />
     <Resource Include="Images\gears.jpg" />
-    <Resource Include="Views\info.png" />
     <Resource Include="Images\help.ico" />
-    <Resource Include="Images\Star.png" />
-    <Resource Include="Views\check.png" />
-    <Resource Include="Views\Fav2.png" />
-    <Resource Include="Images\square.png" />
-    <Resource Include="Images\SwirlLogo2.png" />
+    <Resource Include="Images\Light1.jpg" />
+    <Resource Include="Images\lines.jpg" />
+    <Resource Include="Images\logo.ico" />
+    <Resource Include="Images\page_copy.png" />
     <Resource Include="Images\SpikeBalls.jpg" />
+    <Resource Include="Images\square.png" />
+    <Resource Include="Images\Star.png" />
+    <Resource Include="Images\SwirlLogo2.png" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\KaxamlPlugins\KaxamlPlugins.csproj">
-      <Project>{F6B1B201-8293-4729-842C-0BB54F89FFA7}</Project>
-      <Name>KaxamlPlugins</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Shazzam.Files\Shazzam.Files.csproj">
-      <Project>{70c23b62-4306-46fd-adaf-1a9c9532401c}</Project>
-      <Name>Shazzam.Files</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
-      <Visible>False</Visible>
-      <ProductName>Windows Installer 3.1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <PublishFile Include="ICSharpCode.TextEditor">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
-  </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>
