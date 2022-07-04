@@ -70,9 +70,26 @@ namespace Shazzam.ViewModels
             string path = Properties.Settings.Default.FolderPath_Output;
             if (System.IO.Directory.Exists(path))
             {
-                System.Diagnostics.Process.Start(path);
-            }
+                Process process = new()
+                {
+                    StartInfo = new("Explorer.exe")
+                    {
+                        Arguments = path,
+                    },
+                };
 
+                try
+                {
+                    process.Start();
+                }
+                catch (Exception)
+                {
+                }
+                finally
+                {
+                    process?.Close();
+                }
+            }
         }
 
         #endregion
