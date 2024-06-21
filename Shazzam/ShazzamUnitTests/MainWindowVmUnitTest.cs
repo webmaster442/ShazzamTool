@@ -1,15 +1,11 @@
-﻿using System.Windows;
-using System.Windows.Media;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Shazzam.ViewModels;
-using TypeMock.ArrangeActAssert;
-using System;
+﻿using Shazzam.ViewModels;
 using System.Diagnostics;
-using TypeMock;
+using System.Windows;
+using System.Windows.Media;
 
 namespace ShazzamUnitTests
 {
-  [TestClass, Isolated]
+    [TestClass]
   public class MainWindowVmUnitTest
   {
 
@@ -37,15 +33,16 @@ namespace ShazzamUnitTests
     //  http://software.intel.com/en-us/blogs/2009/12/11/adventures-with-typemock-isolator-and-mock-objects/
    // http://www.typemock.com/community/viewtopic.php?p=3598&sid=23814fc24469d7023c8715bbf1066a7b 
 
-    [TestMethod]
-    public void MockSample_TestMessageBox()
-    {
-      // create a mock instance of th System.Diagnostics.Process class
-      //    var process = Isolate.Fake.Instance<Process>();
-      TypeMock.MockObject mock = MockManager.MockObject(typeof(Process));
-      mock.CallStatic.ExpectAndReturn("Start", mock.Object);
+    //[TestMethod]
+    //public void MockSample_TestMessageBox()
+    //{
+    //  // create a mock instance of th System.Diagnostics.Process class
+    //  //    var process = Isolate.Fake.Instance<Process>();
+    //  //TypeMock.MockObject mock = MockManager.MockObject(typeof(Process));
+    //  //mock.CallStatic.ExpectAndReturn("Start", mock.Object);
 
-    }
+    //}
+
     [TestMethod]
     public void CodeAndImageRows_CheckDefault_AreBothSameHeight()
     {

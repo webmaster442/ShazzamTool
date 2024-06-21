@@ -66,9 +66,9 @@ namespace Shazzam
 
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
             try
             {
