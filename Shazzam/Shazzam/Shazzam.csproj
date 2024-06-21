@@ -51,11 +51,11 @@
 
   <ItemGroup>
     <PackageReference Include="Extended.Wpf.Toolkit" Version="4.6.0" />
-    <PackageReference Include="ICSharpCode.TextEditor" Version="3.2.1.6466" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.10.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ICsharpCode.TextEditor\Project\ICSharpCode.TextEditor.csproj" />
     <ProjectReference Include="..\KaxamlPlugins\KaxamlPlugins.csproj" />
     <ProjectReference Include="..\Shazzam.Files\Shazzam.Files.csproj" />
   </ItemGroup>

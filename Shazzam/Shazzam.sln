@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.329
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shazzam", "Shazzam\Shazzam.csproj", "{EB76EF00-42DE-4715-9675-CFBB2C073F8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shazzam", "Shazzam\Shazzam.csproj", "{EB76EF00-42DE-4715-9675-CFBB2C073F8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KaxamlPlugins", "KaxamlPlugins\KaxamlPlugins.csproj", "{F6B1B201-8293-4729-842C-0BB54F89FFA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KaxamlPlugins", "KaxamlPlugins\KaxamlPlugins.csproj", "{F6B1B201-8293-4729-842C-0BB54F89FFA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShazzamUnitTests", "ShazzamUnitTests\ShazzamUnitTests.csproj", "{52233C5C-BEC9-4B5D-A1F7-8C9300E955B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShazzamUnitTests", "ShazzamUnitTests\ShazzamUnitTests.csproj", "{52233C5C-BEC9-4B5D-A1F7-8C9300E955B2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{98D25AEF-1D81-4571-BB3E-5A3A85C8B79F}"
 	ProjectSection(SolutionItems) = preProject
@@ -16,7 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shazzam.Files", "Shazzam.Files\Shazzam.Files.csproj", "{70C23B62-4306-46FD-ADAF-1A9C9532401C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shazzam.Files", "Shazzam.Files\Shazzam.Files.csproj", "{70C23B62-4306-46FD-ADAF-1A9C9532401C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICSharpCode.TextEditor", "ICsharpCode.TextEditor\Project\ICSharpCode.TextEditor.csproj", "{986C9E25-660C-44DC-9805-34E0CBB340E2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ICSharpCode.TextEditor.Tests", "ICsharpCode.TextEditor\Test\ICSharpCode.TextEditor.Tests.csproj", "{620A5E58-524E-4C19-B69D-C9B3E6AB3337}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +44,14 @@ Global
 		{70C23B62-4306-46FD-ADAF-1A9C9532401C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70C23B62-4306-46FD-ADAF-1A9C9532401C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70C23B62-4306-46FD-ADAF-1A9C9532401C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{986C9E25-660C-44DC-9805-34E0CBB340E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{986C9E25-660C-44DC-9805-34E0CBB340E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{986C9E25-660C-44DC-9805-34E0CBB340E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{986C9E25-660C-44DC-9805-34E0CBB340E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{620A5E58-524E-4C19-B69D-C9B3E6AB3337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{620A5E58-524E-4C19-B69D-C9B3E6AB3337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{620A5E58-524E-4C19-B69D-C9B3E6AB3337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{620A5E58-524E-4C19-B69D-C9B3E6AB3337}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
