@@ -113,7 +113,7 @@ namespace ICSharpCode.TextEditor.Tests
 		
 		void AssertList(List<FoldMarker> l, params int[] markers)
 		{
-			Assert.AreEqual(markers.Length, l.Count);
+			Assert.That(l.Count, Is.EqualTo(markers.Length));
 			foreach (int m in markers) {
 				Assert.Contains(list[m], l);
 			}

@@ -36,10 +36,13 @@ namespace ICSharpCode.TextEditor.Tests
 			"1\n" +
 			"\n";
 			document.TextContent = testText;
-			
-			Assert.AreEqual(testText, document.TextContent);
-			Assert.AreEqual(11, document.TotalNumberOfLines);
-			Assert.AreEqual(testText.Length, document.TextLength);
+
+			Assert.Multiple(() =>
+			{
+				Assert.That(document.TextContent, Is.EqualTo(testText));
+				Assert.That(document.TotalNumberOfLines, Is.EqualTo(11));
+				Assert.That(document.TextLength, Is.EqualTo(testText.Length));
+			});
 		}
 		
 		[Test]
@@ -61,7 +64,7 @@ namespace ICSharpCode.TextEditor.Tests
 			
 			document.TextContent = top;
 			document.Insert(top.Length, testText);
-			Assert.AreEqual(top + testText, document.TextContent);
+			Assert.That(document.TextContent, Is.EqualTo(top + testText));
 		}
 		
 		[Test]
@@ -82,14 +85,17 @@ namespace ICSharpCode.TextEditor.Tests
 			"\n";
 			document.TextContent = top + testText;
 			document.Remove(0, top.Length);
-			Assert.AreEqual(document.TextContent, testText);
+			Assert.That(testText, Is.EqualTo(document.TextContent));
 			
 			document.Remove(0, document.TextLength);
 			LineSegment line = document.GetLineSegment(0);
-			Assert.AreEqual(0, line.Offset);
-			Assert.AreEqual(0, line.Length);
-			Assert.AreEqual(0, document.TextLength);
-			Assert.AreEqual(1, document.TotalNumberOfLines);
+			Assert.Multiple(() =>
+			{
+				Assert.That(line.Offset, Is.EqualTo(0));
+				Assert.That(line.Length, Is.EqualTo(0));
+				Assert.That(document.TextLength, Is.EqualTo(0));
+				Assert.That(document.TotalNumberOfLines, Is.EqualTo(1));
+			});
 		}
 		
 		[Test]
@@ -100,15 +106,19 @@ namespace ICSharpCode.TextEditor.Tests
 			string top      = "1234567890";
 			document.TextContent = top;
 			
-			Assert.AreEqual(document.GetLineSegment(0).Length, document.TextLength);
+			Assert.That(document.TextLength, Is.EqualTo(document.GetLineSegment(0).Length));
 			
 			document.Remove(0, document.TextLength);
 			
 			LineSegment line = document.GetLineSegment(0);
-			Assert.AreEqual(0, line.Offset);
-			Assert.AreEqual(0, line.Length);
-			Assert.AreEqual(0, document.TextLength);
-			Assert.AreEqual(1, document.TotalNumberOfLines);
+
+			Assert.Multiple(() =>
+			{
+				Assert.That(line.Offset, Is.EqualTo(0));
+				Assert.That(line.Length, Is.EqualTo(0));
+				Assert.That(document.TextLength, Is.EqualTo(0));
+				Assert.That(document.TotalNumberOfLines, Is.EqualTo(1));
+			});
 		}
 		
 		[Test]
@@ -124,9 +134,12 @@ namespace ICSharpCode.TextEditor.Tests
 			document.Insert(top.Length, testText);
 			
 			LineSegment line = document.GetLineSegment(document.TotalNumberOfLines - 1);
-			
-			Assert.AreEqual(top.Length - 1, line.Offset);
-			Assert.AreEqual(testText.Length + 1, line.Length);
+
+			Assert.Multiple(() =>
+			{
+				Assert.That(line.Offset, Is.EqualTo(top.Length - 1));
+				Assert.That(line.Length, Is.EqualTo(testText.Length + 1));
+			});
 		}
 		
 //		[Test]

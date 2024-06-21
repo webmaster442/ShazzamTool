@@ -47,7 +47,7 @@ namespace ICSharpCode.TextEditor.Tests
 			BlockCommentRegion expectedCommentRegion = new BlockCommentRegion(commentStart, commentEnd, 0, 4);
 			
 			BlockCommentRegion commentRegion = ToggleBlockComment.FindSelectedCommentRegion(document, commentStart, commentEnd, selectionStartOffset, selectionEndOffset);
-			Assert.AreEqual(expectedCommentRegion, commentRegion);
+			Assert.That(commentRegion, Is.EqualTo(expectedCommentRegion));
 		}
 		
 		[Test]
@@ -59,7 +59,7 @@ namespace ICSharpCode.TextEditor.Tests
 			BlockCommentRegion expectedCommentRegion = new BlockCommentRegion(commentStart, commentEnd, 1, 6);
 			
 			BlockCommentRegion commentRegion = ToggleBlockComment.FindSelectedCommentRegion(document, commentStart, commentEnd, selectionStartOffset, selectionEndOffset);
-			Assert.AreEqual(expectedCommentRegion, commentRegion);
+			Assert.That(commentRegion, Is.EqualTo(expectedCommentRegion));
 		}
 		
 		[Test]
@@ -71,7 +71,7 @@ namespace ICSharpCode.TextEditor.Tests
 			BlockCommentRegion expectedCommentRegion = new BlockCommentRegion(commentStart, commentEnd, 0, 5);
 			
 			BlockCommentRegion commentRegion = ToggleBlockComment.FindSelectedCommentRegion(document, commentStart, commentEnd, selectionStartOffset, selectionEndOffset);
-			Assert.AreEqual(expectedCommentRegion, commentRegion);
+			Assert.That(commentRegion, Is.EqualTo(expectedCommentRegion));
 		}
 		
 		[Test]
@@ -83,7 +83,7 @@ namespace ICSharpCode.TextEditor.Tests
 			BlockCommentRegion expectedCommentRegion = new BlockCommentRegion(commentStart, commentEnd, 0, 5);
 			
 			BlockCommentRegion commentRegion = ToggleBlockComment.FindSelectedCommentRegion(document, commentStart, commentEnd, selectionStartOffset, selectionEndOffset);
-			Assert.AreEqual(expectedCommentRegion, commentRegion);
+			Assert.That(commentRegion, Is.EqualTo(expectedCommentRegion));
 		}
 		
 		[Test]
@@ -95,7 +95,7 @@ namespace ICSharpCode.TextEditor.Tests
 			BlockCommentRegion expectedCommentRegion = new BlockCommentRegion(commentStart, commentEnd, 0, 5);
 			
 			BlockCommentRegion commentRegion = ToggleBlockComment.FindSelectedCommentRegion(document, commentStart, commentEnd, selectionStartOffset, selectionEndOffset);
-			Assert.AreEqual(expectedCommentRegion, commentRegion);
+			Assert.That(commentRegion, Is.EqualTo(expectedCommentRegion));
 		}		
 		
 		[Test]
@@ -107,7 +107,7 @@ namespace ICSharpCode.TextEditor.Tests
 			BlockCommentRegion expectedCommentRegion = new BlockCommentRegion(commentStart, commentEnd, 0, 4);
 			
 			BlockCommentRegion commentRegion = ToggleBlockComment.FindSelectedCommentRegion(document, commentStart, commentEnd, selectionStartOffset, selectionEndOffset);
-			Assert.AreEqual(expectedCommentRegion, commentRegion);
+			Assert.That(commentRegion, Is.EqualTo(expectedCommentRegion));
 		}
 		
 		[Test]
@@ -119,7 +119,7 @@ namespace ICSharpCode.TextEditor.Tests
 			BlockCommentRegion expectedCommentRegion = new BlockCommentRegion(commentStart, commentEnd, 0, 5);
 			
 			BlockCommentRegion commentRegion = ToggleBlockComment.FindSelectedCommentRegion(document, commentStart, commentEnd, selectionStartOffset, selectionEndOffset);
-			Assert.AreEqual(expectedCommentRegion, commentRegion);
+			Assert.That(commentRegion, Is.EqualTo(expectedCommentRegion));
 		}	
 		
 		[Test]
@@ -130,7 +130,7 @@ namespace ICSharpCode.TextEditor.Tests
 			int selectionEndOffset = 0;
 			
 			BlockCommentRegion commentRegion = ToggleBlockComment.FindSelectedCommentRegion(document, commentStart, commentEnd, selectionStartOffset, selectionEndOffset);
-			Assert.IsNull(commentRegion);
+			Assert.That(commentRegion, Is.Null);
 		}
 		
 		[Test]
@@ -141,7 +141,7 @@ namespace ICSharpCode.TextEditor.Tests
 			int selectionEndOffset = 8;
 			
 			BlockCommentRegion commentRegion = ToggleBlockComment.FindSelectedCommentRegion(document, commentStart, commentEnd, selectionStartOffset, selectionEndOffset);
-			Assert.IsNull(commentRegion);
+			Assert.That(commentRegion, Is.Null);
 		}
 		
 		[Test]
@@ -158,7 +158,7 @@ namespace ICSharpCode.TextEditor.Tests
 			int selectionEndOffset = selectionStartOffset + selectedText.Length;
 			
 			BlockCommentRegion commentRegion = ToggleBlockComment.FindSelectedCommentRegion(document, commentStart, commentEnd, selectionStartOffset, selectionEndOffset);
-			Assert.IsNull(commentRegion);
+			Assert.That(commentRegion, Is.Null);
 		}
 	}
 }
