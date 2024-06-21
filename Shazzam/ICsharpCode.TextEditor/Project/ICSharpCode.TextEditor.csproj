@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Resources\ASPX.xshd" />
+		<EmbeddedResource Include="Resources\BAT-Mode.xshd" />
+		<EmbeddedResource Include="Resources\CPP-Mode.xshd" />
+		<EmbeddedResource Include="Resources\Coco-Mode.xshd" />
+		<EmbeddedResource Include="Resources\CSharp-Mode.xshd" />
+		<EmbeddedResource Include="Resources\HTML-Mode.xshd" />
+		<None Include="Resources\ICSharpCode.TextEditor.snk" />
+		<EmbeddedResource Include="Resources\TextEditorControl.bmp" />
+		<EmbeddedResource Include="Resources\Java-Mode.xshd" />
+		<EmbeddedResource Include="Resources\JavaScript-Mode.xshd" />
+		<EmbeddedResource Include="Resources\Mode.xsd" />
+		<EmbeddedResource Include="Resources\PHP-Mode.xshd" />
+		<EmbeddedResource Include="Resources\RightArrow.cur" />
+		<EmbeddedResource Include="Resources\SyntaxModes.xml" />
+		<EmbeddedResource Include="Resources\Tex-Mode.xshd" />
+		<EmbeddedResource Include="Resources\VBNET-Mode.xshd" />
+		<EmbeddedResource Include="Resources\XML-Mode.xshd" />
+		<EmbeddedResource Include="Resources\Boo.xshd" />
+		<EmbeddedResource Include="Resources\Patch-Mode.xshd" />
+		<EmbeddedResource Include="Resources\Python-Mode.xshd" />
+	</ItemGroup>
+
+</Project>
