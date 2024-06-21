@@ -115,7 +115,7 @@ namespace ICSharpCode.TextEditor.Tests
 		{
 			Assert.That(l.Count, Is.EqualTo(markers.Length));
 			foreach (int m in markers) {
-				Assert.Contains(list[m], l);
+				Assert.That(l, Does.Contain(list[m]));
 			}
 		}
 		

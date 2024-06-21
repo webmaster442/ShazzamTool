@@ -35,7 +35,7 @@ namespace ICSharpCode.TextEditor.Tests
 			int selectionEndOffset = 0;
 			
 			BlockCommentRegion commentRegion = ToggleBlockComment.FindSelectedCommentRegion(document, commentStart, commentEnd, selectionStartOffset, selectionEndOffset);
-			Assert.IsNull(commentRegion, "Should not be a comment region for an empty document");
+			Assert.That(commentRegion, Is.Null);
 		}
 		
 		[Test]
